@@ -38,9 +38,10 @@ const (
 var (
 	jar, _       = cookiejar.New(nil)
 	client       = &http.Client{Jar: jar}
-	regexStrings = [2]string{
+	regexStrings = [3]string{
 		`^https://plus.livephish.com/(?:index.html|)#/catalog/recording/(\d+)$`,
 		`^https://www.livephish.com/browse/music/0,(\d+)/[\w-]+$`,
+		`^https://plus.livephish.com/release/(\d+)$`,
 	}
 )
 
